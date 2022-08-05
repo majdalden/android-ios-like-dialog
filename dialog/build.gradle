@@ -45,6 +45,50 @@ dependencies {
 
 }
 
+ext {
+    PUBLISH_GROUP_ID = 'com.majd_alden'
+    PUBLISH_VERSION = '0.3.0'
+    PUBLISH_ARTIFACT_ID = 'androidIosLikeDialog'
+}
+
+repositories {
+    mavenCentral()
+}
+
+/*publishing  {
+    publications {
+        iosLike(MavenPublication) {
+            groupId 'com.majd_alden.iosLike'
+            artifactId 'dialog'
+            version '0.2.0'
+            artifact(sourceJar)
+            artifact("$buildDir/outputs/aar/dialog-release.aar")
+        }
+    }
+    repositories {
+        maven {
+            url "$buildDir/repo"
+        }
+    }
+}
+
+tasks.withType(Javadoc) {
+    options{ encoding "UTF-8"
+        charSet 'UTF-8'
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+}
+
+publish {
+    repoName = 'iosLike' // repository name
+    userOrg = 'civitasv' // user name
+    groupId = 'com.majd_alden.iosLike' // 到repository一级的域名
+    artifactId = 'dialog' // package name
+    publishVersion = '0.2.0' // version
+    desc = '仿IOS制作的Android组件'
+    website = 'https://github.com/majdalden/android-ios-like-dialog'
+}*/
+
 
 /*
 plugins{
