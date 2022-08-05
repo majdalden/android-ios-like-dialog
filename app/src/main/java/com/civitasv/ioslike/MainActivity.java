@@ -10,7 +10,7 @@ import com.civitasv.ioslike.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    //    private DialogBottom dialogBottoms;
+//    private DialogBottom dialogBottoms;
     private ActivityMainBinding binding;
 
     @Override
