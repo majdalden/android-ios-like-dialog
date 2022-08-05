@@ -6,7 +6,7 @@
 
 使用方式：
 ```java
-implementation 'com.github.majdalden:android-ios-like-dialog:0.2.0 '
+implementation 'com.github.majdalden:android-ios-like-dialog:0.2.0'
 ```
 #### 1.1 普通弹窗
 
