@@ -2,7 +2,7 @@ package com.civitasv.ioslike.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
+import android.content.DialogInterface;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
@@ -17,7 +18,6 @@ import com.civitasv.dialog.R;
 import com.civitasv.ioslike.model.DialogText;
 import com.civitasv.ioslike.model.DialogTextStyle;
 import com.civitasv.ioslike.util.DisplayUtil;
-import com.civitasv.ioslike.util.UIUtil;
 
 /**
  * @author Civitasv
@@ -998,6 +998,26 @@ public class DialogNormal {
      */
     public DialogNormal setCanceledOnTouchOutside(boolean canceledOnTouchOutside) {
         mDialog.setCanceledOnTouchOutside(canceledOnTouchOutside);
+        return this;
+    }
+
+    /**
+     * Set a listener to be invoked when the dialog is dismissed.
+     *
+     * @param listener The {@link DialogInterface.OnDismissListener} to use.
+     */
+    public DialogNormal setOnDismissListener(@Nullable DialogInterface.OnDismissListener listener) {
+        mDialog.setOnDismissListener(listener);
+        return this;
+    }
+
+    /**
+     * Sets a listener to be invoked when the dialog is shown.
+     *
+     * @param listener The {@link DialogInterface.OnShowListener} to use.
+     */
+    public DialogNormal setOnShowListener(@Nullable DialogInterface.OnShowListener listener) {
+        mDialog.setOnShowListener(listener);
         return this;
     }
 

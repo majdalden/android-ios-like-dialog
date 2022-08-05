@@ -2,6 +2,7 @@ package com.civitasv.ioslike.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -14,9 +15,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
@@ -27,8 +28,8 @@ import com.civitasv.ioslike.model.DialogText;
 import com.civitasv.ioslike.model.DialogTextStyle;
 import com.civitasv.ioslike.util.DisplayUtil;
 import com.civitasv.ioslike.util.UIUtil;
-import com.civitasv.ioslike.view.ProgressView;
 import com.civitasv.ioslike.view.LoadingView;
+import com.civitasv.ioslike.view.ProgressView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -580,6 +581,26 @@ public class DialogHud {
      */
     public DialogHud setCanceledOnTouchOutside(boolean canceledOnTouchOutside) {
         mDialog.setCanceledOnTouchOutside(canceledOnTouchOutside);
+        return this;
+    }
+
+    /**
+     * Set a listener to be invoked when the dialog is dismissed.
+     *
+     * @param listener The {@link DialogInterface.OnDismissListener} to use.
+     */
+    public DialogHud setOnDismissListener(@Nullable DialogInterface.OnDismissListener listener) {
+        mDialog.setOnDismissListener(listener);
+        return this;
+    }
+
+    /**
+     * Sets a listener to be invoked when the dialog is shown.
+     *
+     * @param listener The {@link DialogInterface.OnShowListener} to use.
+     */
+    public DialogHud setOnShowListener(@Nullable DialogInterface.OnShowListener listener) {
+        mDialog.setOnShowListener(listener);
         return this;
     }
 

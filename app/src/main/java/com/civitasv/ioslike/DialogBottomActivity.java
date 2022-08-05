@@ -8,14 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.civitasv.ioslike.databinding.ActivityDialogBottomBinding;
-import com.civitasv.ioslike.databinding.ActivityDialogNormalBinding;
 import com.civitasv.ioslike.dialog.DialogBottom;
-import com.civitasv.ioslike.dialog.DialogNormal;
 import com.civitasv.ioslike.model.DialogText;
 import com.civitasv.ioslike.model.DialogTextStyle;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class DialogBottomActivity extends AppCompatActivity {
