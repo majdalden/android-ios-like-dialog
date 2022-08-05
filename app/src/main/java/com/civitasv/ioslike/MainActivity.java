@@ -1,24 +1,16 @@
 package com.civitasv.ioslike;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
-import android.content.Intent;
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.Toast;
-
 import com.civitasv.ioslike.databinding.ActivityMainBinding;
-import com.civitasv.ioslike.dialog.DialogBottom;
-import com.civitasv.ioslike.dialog.DialogHud;
-import com.civitasv.ioslike.dialog.DialogNormal;
-import com.civitasv.ioslike.model.DialogTextStyle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DialogBottom dialogBottoms;
+    //    private DialogBottom dialogBottoms;
     private ActivityMainBinding binding;
 
     @Override
