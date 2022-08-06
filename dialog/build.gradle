@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 //apply plugin: 'com.github.panpf.bintray-publish'
 
 android {
@@ -42,18 +43,31 @@ dependencies {
 
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.6.1'
-
 }
 
-ext {
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.majd_alden'
+                artifactId = 'androidIosLikeDialog'
+                version = '0.4.0'
+            }
+        }
+    }
+}
+
+/*ext {
     PUBLISH_GROUP_ID = 'com.majd_alden'
-    PUBLISH_VERSION = '0.3.0'
+    PUBLISH_VERSION = '0.4.0'
     PUBLISH_ARTIFACT_ID = 'androidIosLikeDialog'
 }
 
 repositories {
     mavenCentral()
-}
+}*/
 
 /*publishing  {
     publications {
