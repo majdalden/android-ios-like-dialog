@@ -72,7 +72,7 @@ public class DialogBottomActivity extends AppCompatActivity {
                     .setCancel("取消")
                     .setCancelStyle(new DialogTextStyle.Builder(this).color(R.color.ios_like_green).typeface(Typeface.create(Typeface.MONOSPACE, Typeface.BOLD_ITALIC)).build())
                     .addBottomItem("按钮1", new DialogTextStyle.Builder(this).color(R.color.ios_like_pink).typeface(Typeface.create(Typeface.MONOSPACE, Typeface.BOLD_ITALIC)).build())
-                    .addBottomItem("按钮2", new DialogTextStyle.Builder(this).color(R.color.ios_like_purple).textSize(20).typeface(Typeface.create(Typeface.MONOSPACE, Typeface.BOLD_ITALIC)).build())
+                    .addBottomItem("按钮2", new DialogTextStyle.Builder(this).textAllCaps(true).color(R.color.ios_like_purple).textSize(20).typeface(Typeface.create(Typeface.MONOSPACE, Typeface.BOLD_ITALIC)).build())
                     .setCanceledOnTouchOutside(true)
                     .show();
         });
