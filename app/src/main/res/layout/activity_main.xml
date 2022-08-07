@@ -14,6 +14,7 @@
             <Button
                 android:id="@+id/normal"
                 android:layout_width="match_parent"
+                android:textAllCaps="false"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dialog_normal_bg"
                 android:text="普通弹窗"
@@ -28,6 +29,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:id="@+id/bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,6 +47,7 @@
             <Button
                 android:id="@+id/hud"
                 android:layout_width="match_parent"
+                android:textAllCaps="false"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dialog_normal_bg"
                 android:text="HUD"

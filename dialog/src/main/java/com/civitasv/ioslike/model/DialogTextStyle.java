@@ -8,7 +8,6 @@ import androidx.annotation.ColorRes;
 import androidx.core.content.ContextCompat;
 
 import com.civitasv.dialog.R;
-import com.civitasv.ioslike.util.UIUtil;
 
 
 /**
@@ -23,19 +22,43 @@ public final class DialogTextStyle {
 
     private final float textSize; // 字大
 
+    private final boolean textAllCaps; // 字大
+
     private final Typeface typeface; // 样式
+
+    private DialogTextStyle(Builder builder) {
+        context = builder.context;
+        color = builder.color;
+        textSize = builder.textSize;
+        textAllCaps = builder.textAllCaps;
+        typeface = builder.typeface;
+    }
+
+    public boolean isTextAllCaps() {
+        return textAllCaps;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public float getTextSize() {
+        return textSize;
+    }
 
     public static class Builder {
         private final Context context;
         // 可选参数
         private int color;
         private float textSize; // 单位：sp
+        private boolean textAllCaps; // 单位：sp
         private Typeface typeface;
 
         public Builder(Context context) {
             this.context = context;
             this.color = ContextCompat.getColor(context, R.color.black);  // 黑色
             this.textSize = 16;
+            this.textAllCaps = false;
             this.typeface = Typeface.defaultFromStyle(Typeface.NORMAL);
         }
 
@@ -54,6 +77,11 @@ public final class DialogTextStyle {
             return this;
         }
 
+        public Builder textAllCaps(boolean textAllCaps) {
+            this.textAllCaps = textAllCaps;
+            return this;
+        }
+
         public Builder typeface(Typeface typeface) {
             this.typeface = typeface;
             return this;
@@ -62,21 +90,6 @@ public final class DialogTextStyle {
         public DialogTextStyle build() {
             return new DialogTextStyle(this);
         }
-    }
-
-    private DialogTextStyle(Builder builder) {
-        context = builder.context;
-        color = builder.color;
-        textSize = builder.textSize;
-        typeface = builder.typeface;
-    }
-
-    public int getColor() {
-        return color;
-    }
-
-    public float getTextSize() {
-        return textSize;
     }
 
     public Typeface getTypeface() {

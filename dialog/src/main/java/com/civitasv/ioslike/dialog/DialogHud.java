@@ -203,6 +203,7 @@ public class DialogHud {
             mLabel.setOnClickListener(label.getOnClickListener());
         if (label.getDialogTextStyle() != null) {
             mLabel.setTextSize(label.getDialogTextStyle().getTextSize());
+            mLabel.setAllCaps(label.getDialogTextStyle().isTextAllCaps());
             mLabel.setTextColor(label.getDialogTextStyle().getColor());
             mLabel.setTypeface(label.getDialogTextStyle().getTypeface());
         }
@@ -220,6 +221,7 @@ public class DialogHud {
         if (style == null)
             throw new NullPointerException();
         mLabel.setTextSize(style.getTextSize());
+        mLabel.setAllCaps(style.isTextAllCaps());
         mLabel.setTextColor(style.getColor());
         mLabel.setTypeface(style.getTypeface());
         return this;
@@ -349,6 +351,7 @@ public class DialogHud {
             mDetailLabel.setOnClickListener(labelDetail.getOnClickListener());
         if (labelDetail.getDialogTextStyle() != null) {
             mDetailLabel.setTextSize(labelDetail.getDialogTextStyle().getTextSize());
+            mDetailLabel.setAllCaps(labelDetail.getDialogTextStyle().isTextAllCaps());
             mDetailLabel.setTextColor(labelDetail.getDialogTextStyle().getColor());
             mDetailLabel.setTypeface(labelDetail.getDialogTextStyle().getTypeface());
         }
@@ -366,6 +369,7 @@ public class DialogHud {
         if (style == null)
             throw new NullPointerException();
         mDetailLabel.setTextSize(style.getTextSize());
+        mDetailLabel.setAllCaps(style.isTextAllCaps());
         mDetailLabel.setTextColor(style.getColor());
         mDetailLabel.setTypeface(style.getTypeface());
         return this;
